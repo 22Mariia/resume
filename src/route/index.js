@@ -215,7 +215,7 @@ router.get('/education', function (req, res) {
 
         layout: 'big',
 
-        page: {
+                page: {
           title: 'Resume | Work',
         },
             header,
@@ -271,7 +271,7 @@ router.get('/education', function (req, res) {
         
           })
         })
-
+            
   //                  ↑↑ сюди вводимо JSON дані
 
 
