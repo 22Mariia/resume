@@ -1,6 +1,6 @@
 {
-  "name": "resume123",
-  "version": "1.0.0",
+  "name": "handlebars",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./index.js",
