@@ -1,0 +1,61 @@
+<div>
+<h1>{{name}}<span class="badge bg-secondary"></span></h1>
+ <p>{{description}}</p>
+ {{#with history}}
+ <p>{{year}}, {{founder}}</p>
+ {{/with}}
+ <hr>
+ <div>
+ <h2>Types:</h2>
+
+{{#each types}}
+{{> bage}}
+{{/each}}
+</div>
+<div>
+<h2>Syntax:</h2>
+
+{{#with syntax}}
+<ol>
+  <li><em>variables:</em>  {{variables}}</li>
+  <li><em> functions:</em>  {{ functions}}</li>
+  <li><em>conditionals:</em>  {{conditionals}}</li>
+  <li><em>loops:</em>  {{loops}}</li>
+  <li><em>classes: </em>  {{classes}}</li>
+</ol>
+{{/with}}
+</div>
+<br>
+<div>
+<h2>Features:</h2>
+
+{{#each  features}}
+{{> bage}}
+{{/each}}
+<br>
+<h2>Libraries:</h2>
+
+{{#each   libraries}}
+{{> bage}}
+{{/each}}
+<br>
+<h2>Tools:</h2>
+
+{{#each  tools}}
+{{> bage}}
+{{/each}}
+</div>
+<div>
+  <br>
+<h2>Community:</h2>
+
+{{#each community}}
+<ul>
+  <li>{{type}}</li>
+  <button type="button" class="btn btn-link">{{name}}</button>
+  
+</ul>
+{{/each}}
+
+</div>
+</div>
