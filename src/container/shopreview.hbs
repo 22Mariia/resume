@@ -1,37 +1,40 @@
 <main>
+   
+ 
     <section >
-     <div class="row">
-            <div class="card">
-         {{#each navigation.links}}
-         <div class="card-2">
-               <div class="nav">
+      <div class="card mt-3 mb-5">
+     <div class="row ">
+              {{#each navigation.links}}
+                           <div class="col-2">
+                <div class="nav">
+               <div class="nav flex-column mb-3">
                   <div class="nav-item">
-                         
-                            <a href="{{href}}" class="nav-link active" >{{text}}</a>
+                <a href=" {{href}}" class="nav-link  active" >{{text}}</a>
+                        </div>
                        </div>
                  </div>
-                  </div>    
+                  </div>  
                {{/each}}
-            </div>
+          </div>   
      </div>
     </section>
 
-<div class="row">
-   <div class="col-8 ms-2">
- <section>
+
+   <div class="row">
+<div class="col-12 mb-3 mt-4 ms-2">
+  <div class="col-8">
     {{#with formBlock}}
-   <div class=" mb-3 mt-4">
-   <hi>{{header}}</hi>
-      </div>
-      {{#with rating}}
-    <small ><p>{{title}} {{value}}</p></small>
+    <div class="row">
+    
+      <h1>{{header}}</h1>
+           {{#with rating}}
+    <small><p>{{title}} {{value}}</p></small>
       {{/with}}
   
  <div class="row">
-   {{#with actionBlock}}
-  
-     {{#each tabs}}
-   <div class="col-3 mb-5">
+     {{#with actionBlock}}
+       {{#each tabs}}
+   <div class="col-4 mb-5 mt-5">
 <div class="nav nav-tabs">
     <div class="nav-item">
     <a href="#" class="nav-link {{#if isActive}} active {{/if}}"><small>{{text}}</small></a>
@@ -39,13 +42,13 @@
    </div>
   </div>
   {{/each}}
+  
 
-
+ 
+ <div class="  mb-5 ms-1">
   <hr>
-
- <div class="mt-5 mb-5 ms-1">
  {{#with report}}
- <div class="card ">
+ <div class="card  mt-5">
    <div class="card-body">
 <p>{{title}}</p>
 {{#with button}}
@@ -57,13 +60,11 @@
 </div>
 {{/with}}
  </div>
-
-<hr>
+ 
+ <hr>
 
 <section>
-   <div>
-      <div>
-         {{#with   feedbackBlock}}
+              {{#with   feedbackBlock}}
          <h2>{{title}}</h2>
          <div class="mt-5 mb-5">
          {{#each buttons}}
@@ -73,94 +74,26 @@
          {{/each}}
 </div>
          {{/with}}
-      </div>
+     </section>
+    </div>
+   </div> 
+  </div>
+   
+
+         
+   
+   {{/with}}
+</div>
+</div>
    </div>
-</section>
+ 
+
+
+{{> shopreview}}
 
 <hr>
-<section>
-   <div class="row">
-      <div class="col-4">
-         {{#with  goodsInfo}}
 
-      <div class="card mb-2">
-         <div class="col-6 mt-2 ms-2">
-      <img class="card-img-top" src="{{photo}}" alt="photo"></div>
-       <div class="card-body">
-         <p>{{name}}</p>
-         </div>
-         </div>
-
-         <div class="card">
-            <div class="card-body">
-            {{#if inMarket}}   <p>{{price}}
-                </p>{{/if}}
-            {{#each buttons}}
-               <a class=" {{#if isPrimary}}btn btn-primarybtn-sm {{else}}btn btn-secondary btn-sm{{/if}}" href="{{link}}">{{text}}</a>
-               {{/each}} 
-            </div>
-         </div>
- </div>
-         {{/with}}
-        </div>
-</section>
-
-    {{/with}}
- </section>
-  </div>
-</div>
-
-  <div class="card">
-   <div class="card-body">
- {{#each  reviewList}}
-
-   <div class="card">
-   <div class="card-header">
-      {{#with title}}
-      <h6>{{ userName}}</h6>
-      <p>{{caption}}</p>
-      <p>{{date}}</p>
-      {{/with}}
-   </div>
-   <div class="card">
-{{#with reviewBody}}
-{{#with seller}}
-<p>{{title}} {{value}}</p>
-{{/with}}
-{{#with rating}}
-<p>{{title}} {{value}}</p>
-{{/with}}
-{{#each text}}{{this}}{{/each}}
-{{#with advantages}}
-<h6>{{title}}</h6>
-<p>{{text}}</p>
-{{/with}}
-{{#with disadvantages}}
-<h6>{{title}}</h6>
-<p>{{text}}</p>
-{{/with}}
-<div class="row">
-<div class="col-2">
-{{#each images}}
-<img class="card-img-top" src="{{this}}">
-{{/each}}
-</div>
-</div>
-
-
-   {{#each coments}}
-<div class="card">
-   <h6>{{userName}}</h6>
-   <p>{{date}}</p>
-   <p>{{text}}</p>
-   </div>
-   {{/each}}
-
-{{/with}} 
- {{/each}}
-   </div>
- </div>
-
+<div class="mb-5 mt-5">
  <div class="card text-bg-success text-center">
    {{#with service}}
    <h2>{{title}}</h2>
@@ -170,13 +103,28 @@
 <a class="btn btn-primary" href="{{link}}">{{text}}</a>
 </div>
    {{/each}}
-   {{/with}}
-
+    {{/with}}
  </div>
+</div>
+ <hr>
 
+<section>
+  <div class="row">
+   
+    {{#each footer}}
+    <div class="col-2 ms-3 list-group">
+      <ul class="nav flex-column">
+        {{#each this}}
+        <li class="nav-item my-2">
+          <a href="{{link}} class="nav-link"{{#if @last}}disabled{{/if}} list-item" target="_blank">{{text}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/each}}
+ 
+  </div>
+</section>
 
-
- </div>
- </div>
-
+ 
 </main>
