@@ -21,18 +21,17 @@
 
 
    <div class="row">
-<div class="col-12 mb-3 mt-4 ms-2">
-  <div class="col-8">
-    {{#with formBlock}}
-    <div class="row">
-    
+
+     {{#with formBlock}}
+       <div class="col-8">
       <h1>{{header}}</h1>
            {{#with rating}}
     <small><p>{{title}} {{value}}</p></small>
       {{/with}}
   
- <div class="row">
+    
      {{#with actionBlock}}
+     <div class="row">
        {{#each tabs}}
    <div class="col-4 mb-5 mt-5">
 <div class="nav nav-tabs">
@@ -42,7 +41,7 @@
    </div>
   </div>
   {{/each}}
-  
+  </div>
 
  
  <div class="  mb-5 ms-1">
@@ -59,7 +58,6 @@
  {{/with}}
 </div>
 {{/with}}
- </div>
  
  <hr>
 
@@ -76,16 +74,43 @@
          {{/with}}
      </section>
     </div>
-   </div> 
-  </div>
+  
+  
    
 
-         
-   
+    <div class="col-4">  
+        {{#with  goodsInfo}}
+            <div class="card mb-2">
+         <div class="col-4 mt-2 ms-2">
+      <img class="card-img-top" src="{{photo}}"  alt="photo"></div>
+       <div class="card-body">
+         <p>{{name}}</p>
+         </div>
+         </div>
+
+         <div class="card ">
+            <div class="card-body">
+            {{#if inMarket}}<p>{{price}}      </p>{{/if}}
+            <div class="col-8">            {{#each buttons}}
+              <a class="{{#if isPrimary}}btn btn-primary btn-sm {{else}}btn btn-secondary btn-sm{{/if}}mb-2" href="{{link}}">{{text}}</a>
+          
+               {{/each}} 
+                 </div>
+            </div>
+         </div>
+         <div class="card mt-2">
+          <div class="card-body">
+            {{#with seller}}
+            <p>{{title}} <b>{{value}}</b></p>
+            {{/with}}
+          </div>
+         </div>
+           {{/with}}
+         </div>
+ 
    {{/with}}
 </div>
-</div>
-   </div>
+   
  
 
 
