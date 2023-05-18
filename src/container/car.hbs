@@ -1,9 +1,13 @@
+<main>
+  <div class="m-5">
 
+ <div class="mb-5">
 <h1>Toyota<span class="badge bg-secondary"></span></h1>
 <p>{{model}}  {{year}}  {{color}}</p>
-<hr>
+</div>
+
 {{#with  features}}
-<h2>Features:<span class="badge bg-secondary"></span></h2>
+<h2><span class="badge bg-secondary">Features:</span></h2>
 <ul>
   <li>interior:
 {{#with   interior}}
@@ -29,15 +33,15 @@
   <li>audio:
     {{#with audio}}
     <ul>
-      <li> {{audio:}} {{speakers}} {{subwoofer}} {{ bluetooth}} {{USB}}</li>
+      <li> {{system}} {{speakers}} {{#if subwoofer}}subwoofer{{/if}} {{#if bluetooth}}bluetooth{{/if}} {{#if USB}}USB{{/if}}</li>
     </ul>
     {{/with}}
   </li>
- 
-  </ul>
-  
-{{/with}}
+   </ul>
+  {{/with}}
+  </li>
 </ul>
+
 <ul>
   <li>exterior:
 {{#with   exterior}}
@@ -49,6 +53,7 @@
     </ul>
     {{/with}}
   </li>
+
   <li> headlights:
     {{#with  headlights}}
     <ul>
@@ -63,8 +68,11 @@
     </ul>
     {{/with}}
   </li>
- 
-  </ul>
+   </ul>
+  {{/with}}
+  </li>
+</ul>
+
   <ul>
   <li>safety:
 {{#with   safety}}
@@ -79,6 +87,7 @@
             </ul>
     {{/with}}
   </li>
+
   <li> assistance:
     {{#with  assistance}}
     <ul>
@@ -93,3 +102,45 @@
   </ul>
  {{/with}}
 
+  </li>
+  </ul>
+  {{/with}}
+  <h2><span class="badge bg-secondary">Engine:</span></h2>
+  {{#with engine}}
+<ul>
+  <li>type: {{type}}</li>
+  <li>displacement: {{displacement}}</li>
+  <li>horsepower: {{horsepower}}</li>
+  <li>torque: {{torque}}</li>
+  <li>transmission: {{transmission}}</li>
+  <li> type: {{ type}}</li>
+  <li>gears: {{gears}}</li>
+</ul>
+  {{/with}}
+   <h2><span class="badge bg-secondary">Fuel economy:</span></h2>
+  {{#with fuel_economy}}
+  <ul>
+    <li>city: {{city}}</li>
+    <li>highway: {{highway}}</li>
+    <li>combined: {{combined}}</li>
+  </ul>
+  {{/with}}
+  <h2><span class="badge bg-secondary"> Price:</span></h2>
+  {{#with  price}}
+  <ul>
+    <li> base: {{ base}}</li>
+    <li>destination: {{destination}}</li>
+    <li>options:
+      {{#with options}}
+      <ul>
+       <li>navigation: {{navigation}}</li>
+       <li>moonroof: {{moonroof}}</li>
+       <li>premium_paint: {{premium_paint}}</li>
+      </ul>
+      {{/with}}</li>
+    <li>total: {{total}}</li>
+  </ul>
+  {{/with}}
+
+ </div>
+</main>
