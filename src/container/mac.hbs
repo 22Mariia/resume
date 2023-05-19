@@ -1,0 +1,125 @@
+<main>
+  <div class="m-5">
+  <h1>{{name}}</h1>
+  <p>{{description}}</p>
+  <p> price: {{price}}</p>
+  <p>{{category}}</p>
+  <p>Features:</p>
+  {{#with features}}
+  <ul>
+    <div class="mb-4">
+    <li> processor:
+     {{#with processor}}
+    <ul>
+      <li>brand: {{brand}}</li>
+      <li> model: {{ model }} </li>
+      <li>speed: {{speed}}</li>
+      <li>cores: {{cores}}</li>
+      <li>cache: {{cache}}</li>
+    </ul>
+    </li>
+      {{/with}}
+      </div>
+      <div class="mb-4">
+      <li> memory:
+      {{#with  memory}}
+      <ul>
+        <li>type: {{type}}</li>
+        <li>size: {{size}}</li>
+        <li>speed: {{speed}}</li>
+      </ul>
+      {{/with}}
+</li>
+</div>
+<div class="mb-4">
+  <li> storage:
+    {{#with storage}}
+    <ul>
+      <li>type: {{type}}</li>
+      <li>size: {{size:}}</li>
+    </ul>
+    {{/with}}
+  </li>
+  </div>
+  <div class="mb-4">
+  <li> display:
+    {{#with  display}}
+    <ul>
+      <li> size: {{ size}}</li>
+      <li>resolution: {{resolution}}</li>
+      <li>technology: {{technology}}</li>
+      <li> color_space: {{ color_space}}</li>
+      <li>brightness: {{brightness}}</li>
+      <li>refresh_rate: {{refresh_rate}}</li>
+    </ul>
+    {{/with}}
+  </li> 
+  </div>
+<div class="mb-4">
+  <li>graphics:
+    {{#with graphics}}
+    <ul>
+      <li>brand: {{brand}}</li>
+      <li>model: {{model}}</li>
+      <li>memory: {{memory}}</li>
+    </ul>
+    {{/with}}
+  </li>
+  </div>
+  <div class="mb-4">
+  <li> ports:
+{{#each  ports}}
+<ul>
+  <li> type: {{type}} </li>
+  <li> count:{{count}} </li>
+  <li>features:
+    {{#each  features}}
+    <ul>
+      <li>{{this}}</li>
+    </ul>{{/each}}
+  </li>
+ </ul>
+{{/each}}
+  </li>
+  </div>
+  <div class="mb-4">
+  <li> battery:
+    {{#with  battery}}
+    <ul>
+      <li>type: {{type}}</li>
+      <li>capacity: {{capacity}}</li>
+      <li>life: {{life}}</li>
+    </ul>
+    {{/with}}
+  </li>
+  </div>
+  <div class="mb-4">
+  <li>weight: {{weight}}</li>
+  </div>
+  <div class="mb-4">
+  <li>dimensions:
+    {{#with dimensions}}
+    <ul>
+      <li>height: {{height}}</li>
+      <li>width: {{width}}</li>
+      <li>depth: {{depth}}</li>
+    </ul>
+    {{/with}}
+  </li>
+  </div>
+  <div class="mb-4">
+<li> operating_system: {{ operating_system}}</li>
+</div>
+<div class="mb-4">
+<li>  accessories:
+  {{#each   accessories}}
+  <ul>
+    <li>{{name}} - {{price}}</li>
+  </ul>
+  {{/each}}
+</li>
+  </ul>
+   {{/with}}
+   </div>
+   </div>
+</main>
