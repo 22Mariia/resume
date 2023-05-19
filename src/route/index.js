@@ -84,7 +84,7 @@ router.get('/', function (req, res) {
                  },
                  {
                   text: 'shophome',
-                  link: '/shophomer',
+                  link: '/shophome',
                    },
                    {
                     text: 'shoporder',
@@ -92,7 +92,7 @@ router.get('/', function (req, res) {
                      },
                      {
                       text: 'shopreview',
-                      link: '/shopreviewr',
+                      link: '/shopreview',
                        },
                        {
                         text: 'task21',
