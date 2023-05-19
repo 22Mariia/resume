@@ -59,9 +59,9 @@ router.get('/', function (req, res) {
     text: 'Мій перший проект',
     buttons: [
       {
-        text: 'Додати відгук',
+        text: 'bio',
         
-        link: 'https://www.youtube.com/',
+        link: 'http://localhost:3000//bio',
       },
     ],
   },
