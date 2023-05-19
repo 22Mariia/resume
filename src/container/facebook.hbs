@@ -1,0 +1,38 @@
+<main>
+  <div class="m-5">
+<h1>{{name}}</h1>
+<b>Users:</b>
+{{#each users}}
+<p>- {{id}}) {{name}}, {{gander}} ,{{age}}, 
+  friends: {{#each friends}}
+<ul>
+  <li>{{id}}) {{name}}, {{gender}}, {{name}}, mutual friends: {{#each mutual_friends}} 
+    <p>- {{id}}) {{name}}, {{gender}}, {{age}}, mutual friends: {{#each mutual_friends}}
+      <p>- {{id}}) {{name}}, {{gender}}, {{age}}</p>
+       {{/each}}</p>
+
+    {{/each}}
+         </li>
+</ul>
+{{#each groups}}
+<ul>
+  <li>{{id}}) {{name}} - {{description}}. Members: {{#each members}} {{id}}) {{name}}, {{gender}}, {{age}}
+    {{/each}}
+  </li>
+</ul>
+{{/each}}
+  {{/each}}
+
+
+{{#each groups}}
+<ul>
+  <li>{{id}}) {{name}} - {{description}}. Members: {{#each members}} {{id}}) {{name}}, {{gender}}, {{age}}
+    {{/each}}
+  </li>
+</ul>
+{{/each}}
+</p>
+{{/each}}
+
+</div>
+</main>
