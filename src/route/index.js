@@ -41,7 +41,31 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: "index",
+    navigation: {
+      links: [
+        {
+          text: 'Марінець Марія',
+    },
+    {
+      text: 'Resume project',
+      isTop: true,
+          },
+  ],
+  },
+  formBlock: {
+    header: 'Cписок сторінок',
+    text: 'Мій перший проект',
+    buttons: [
+      {
+        text: 'Додати відгук',
+        
+        link: 'https://www.youtube.com/',
+      },
+    ],
+  },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
