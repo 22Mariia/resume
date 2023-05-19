@@ -122,6 +122,7 @@ router.get('/', function (req, res) {
                                
 ],
 },
+ 
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
