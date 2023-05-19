@@ -1,28 +1,29 @@
-<main>
+<main class="m-3">
     <section >
-     <div class="row">
-     
-
       
        <div class="card">
+         <div class="row">
          {{#each navigation.links}}
-         <div class="card-2">
+             <div class="col-2">  
+       
                <div class="nav">
                   <div class="nav-item">
                          
                             <a href="{{href}}" class="nav-link active" >{{text}}</a>
-                       </div>
-                 </div>
-                  </div>    
+                      
+                 
+                  </div> 
+                   </div>
+     </div>   
                {{/each}}
-            
+            </div> 
+            </div>
     
-     </div>
-     </div>
+    
     </section>
    
     <section>
-       <div class="row gy-2 gx-2" >
+       <div class="row gy-2 gx-2 " >
         {{#with newsBlock}}
         <h1 class="text-center">{{title}}</h1>
          {{#each cards}}
@@ -45,19 +46,20 @@
     <hr>
 
     <section>
+   
       {{#with goodsBlock}}
-      <div class="row g-4">
-        <div class="col-12">
+      <div class="row">
+      
         {{#each tabs}}
-        <div class="col-3">
+        <div class="col-3 mt-4">
         <div class="nav-tabs">
           <div class="nav-item">
-            <a href="#" class="nav-link active">{{text}}</a>
+            <a href="#" class="nav-link{{#if isActive}}active{{/if}} {{#if isDisabled}}disabled{{/if}}">{{text}}</a>
           </div>
 </div>
         </div>
         {{/each}}
-      </div>
+     
       </div>
 <div class="row">
   {{#each cards}}
@@ -80,16 +82,21 @@
     <section>
       <div class="card text-bg-dark">
         {{#with subscribe}}
+        <div class="ms-2">
 <h2>{{header}}</h2>
 <p>{{description}}</p>
-
+   </div>
 {{#each buttons}}
-<div class="me-5 pe-5 mb-1">
+<div class="col-4">
+<div class=" ms-2 mb-2">
 <div class="card ">
-    <a class="btn btn-primary"   href="{{link}}">{{text}}</a>
+    <a class="btn btn-primary" href="{{link}}">{{text}}</a>
     </div>
     </div>
+    </div>
+   
 {{/each}}
+</div>
         {{/with}}
       </div>
     </section>
@@ -98,30 +105,32 @@
 <section>
   <div class="card text-bg-success text-center">
     {{#with service}}
-    <h2>{{title}}</h2>
+        <h2>{{title}}</h2>
     <p>{{description}}</p>
-    {{#each buttons}}
-    <div class="ps-5 pe-5 ms-5 me-5 mb-2">
-    <div class="card ">
-    <a class="btn btn-primary" href="{{link}}">{{text}}</a>
-    </div>
-    </div>
+       {{#each buttons}}
+      <div class="card-body text-bg-success ">
+    <a class="btn btn-primary "  href="{{link}}">{{text}}</a>
+  </div>
     {{/each}}
 
     {{/with}}
+ </div>
   </div>
 </section>
 <hr>
-
-<section class="row gy-5">
+<section class="row ">
   {{#each footer}}
-       <div class="col-2 gy-4 list-group">
-       
-        <a href="{{link}}" class="my-5 list-item" target="_blank"><button class="btn btn-link">{{text}}</button></a>
-
+       <div class="col-2">
+       <div class="nav flex-column">
+        {{#each this}}
+        <div class="nav-item">
+          <a class="nav-item{{#if @last}}disabled{{/if}}" href="{{link}}">{{text}}</a>
+        </div>
+      {{/each}}
+</div>
       </div>
-        
-  {{/each}}
+        {{/each}}
+
 </section>
 
 </main>
