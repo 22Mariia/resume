@@ -1,11 +1,13 @@
-<div>
+
+<main>
+<div class="m-5">
 <h1>{{name}}<span class="badge bg-secondary"></span></h1>
  <p>{{description}}</p>
  {{#with history}}
  <p>{{year}}, {{founder}}</p>
  {{/with}}
  <hr>
- <div>
+ <div class="mb-5 mt-5">
  <h2>Types:</h2>
 
 {{#each types}}
@@ -25,20 +27,20 @@
 </ol>
 {{/with}}
 </div>
-<br>
-<div>
+
+<div class="mb-5 mt-5">
 <h2>Features:</h2>
 
 {{#each  features}}
 {{> bage}}
 {{/each}}
-<br>
+<div class="mt-5 mb-5">
 <h2>Libraries:</h2>
 
 {{#each   libraries}}
 {{> bage}}
 {{/each}}
-<br>
+</div>
 <h2>Tools:</h2>
 
 {{#each  tools}}
@@ -59,3 +61,4 @@
 
 </div>
 </div>
+</main>
