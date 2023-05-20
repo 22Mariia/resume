@@ -119,7 +119,22 @@ router.get('/', function (req, res) {
                                   text: 'person',
                                   link: '/person',
                                    },
-                               
+                                   {
+                                    text: 'work',
+                                    link: '/work',
+                                     },
+                                     {
+                                      text: 'summary',
+                                      link: '/summary',
+                                       },
+                                       {
+                                        text: 'skills',
+                                        link: '/skills',
+                                         },
+                                         {
+                                          text: 'education',
+                                          link: '/education',
+                                           },
 ],
 },
  
